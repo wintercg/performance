@@ -1,0 +1,47 @@
+<pre class='metadata'>
+Title: Minimum Common Web Performance API
+Shortname: common-web-perf-api
+Group: wintercg
+Status: w3c/CG-DRAFT
+Level: none
+URL: https://common-min-api.proposal.wintercg.org/
+Repository: https://github.com/wintercg/performance
+Editor: Chengzhong Wu, Alibaba https://www.alibaba.com/, chengzhong.wcz@alibaba-inc.com
+Abstract: Minimum Common Web Performance API for Non-Browser EcmaScript-based runtimes.
+Markup Shorthands: markdown yes
+</pre>
+<pre class=link-defaults>
+spec: hr-time-2; type: interface; text: Performance;
+spec: user-timing-2; type: attribute; text: Performance/mark();
+spec: performance-timeline; type: interface; text: PerformanceObserver
+</pre>
+
+Introduction {#intro}
+=====================
+
+*This section is non-normative.*
+
+The Minimum Common Web Performance API is a curated subset of standardized Web Performance APIs intended to define a minimum set of capabilities common to Browser and Non-Browser JavaScript-based runtime environments.
+
+Common API Index {#index}
+=========================
+
+All [=Web-interoperable Runtimes=] conforming to this specification SHALL fully implement each of the following Web Platform APIs in accordance to their normative standard requirements except where modified here. Where any conforming runtime environment chooses (either by necessity or otherwise) to diverge from a normative requirement of the specification, clear explanations of such divergence MUST be made clearly and readily available in documentation.
+
+Interfaces:
+
+* {{Performance}}, [[HR-TIME-2]]
+* {{Performance.now()}}, [[HR-TIME-2]]
+* {{Performance.timeOrigin}}, [[HR-TIME-2]]
+* {{Performance.mark()}}, [[USER-TIMING-2]]
+* <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/user-timing-2/#dom-performance-mark">performance.mark</a></code>, [[USER-TIMING-2]]
+* <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/user-timing-2/#dom-performance-measure">performance.measure</a></code>, [[USER-TIMING-2]]
+* <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/user-timing-2/#dom-performance-clearmarks">performance.clearMarks</a></code>, [[USER-TIMING-2]]
+* <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/user-timing-2/#dom-performance-clearmeasures">performance.clearMeasures</a></code>, [[USER-TIMING-2]]
+* <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/performance-timeline/#dom-performance-getentries">performance.getEntries</a></code>, [[PERFORMANCE-TIMELINE]]
+* <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/performance-timeline/#dom-performance-getentriesbytype">performance.getEntriesByType</a></code>, [[PERFORMANCE-TIMELINE]]
+* <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/performance-timeline/#dom-performance-getentriesbyname">performance.getEntriesByName</a></code>, [[PERFORMANCE-TIMELINE]]
+
+* {{PerformanceObserver}}, [[PERFORMANCE-TIMELINE]]
+
+TODO: define the presets of entry types, as in the [[Timing Entry Names Registry]]
